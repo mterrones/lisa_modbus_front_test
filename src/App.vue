@@ -15,8 +15,8 @@
             </thead>
             <tbody>
               <tr v-for="(value, key) in data" :key="key">
-                <td>{{ key }}</td>
-                <td>{{ value }}</td>
+                <td>{{ value.key }}</td>
+                <td>{{ value.value }}</td>
               </tr>
             </tbody>
           </v-simple-table>
