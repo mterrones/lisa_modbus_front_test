@@ -51,7 +51,7 @@ export default {
   methods: {
     // Función para cargar datos desde el servidor
     loadData() {
-      fetch("http://localhost:4000/data")
+      fetch("http://localhost:4001/data")
         .then((response) => response.json())
         .then((json) => {
           this.data = Object.entries(json).map(([key, value]) => ({
