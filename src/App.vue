@@ -6,19 +6,20 @@
           Lisa MODBUS
         </v-card-title>
         <v-card-text>
-          <v-data-table
-            :headers="headers"
-            :items="data"
-            class="elevation-1"
-            hide-default-footer
-          >
-            <template v-slot:top>
-              <v-toolbar flat>
-                <v-toolbar-title>La lectura de los datos:</v-toolbar-title>
-                <v-spacer></v-spacer>
-              </v-toolbar>
-            </template>
-          </v-data-table>
+          <v-simple-table>
+            <thead>
+              <tr>
+                <th>Input</th>
+                <th>Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(value, key) in data" :key="key">
+                <td>{{ key }}</td>
+                <td>{{ value }}</td>
+              </tr>
+            </tbody>
+          </v-simple-table>
         </v-card-text>
       </v-card>
     </v-container>
